@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 
+{% block contents %}
 <body>
-    {% block contents %}
-
-    <h1>이름: 김기원</h1>
+    <h1>이름: 김기원 혹은 <a href="https://www.youtube.com/channel/UCXpGYSja7qYXIpPXgWO64hQ">Milliwonkim</a></h1>
     <h2>나이: 이십육</h2>
     <h3>취미: 노래만들기, 넷플릭스보기, 프론트엔드 코딩하기, 한강에서 자전거타기, 술먹기</h3>
-    {% endblock %}
 </body>
+<footer>
+    <h3><a href="{% url 'main' %}">Main으로 돌아가기</a></h3>
+</footer>
+{% endblock %}
