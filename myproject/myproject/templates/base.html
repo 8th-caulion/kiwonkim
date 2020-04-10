@@ -1,3 +1,5 @@
+{% load static %}
+
 <!-- 모든곳에 공통으로 들어가겠으면 좋겠는것을 여기다 적기 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -5,13 +7,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- 이건 어디서나 똑같기 때문에 이렇게 적용해줌 -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
         <title>두번째 실습</title>
     </head>
     <!-- body에 있는 내용은 바뀔거야라는 걸 알려주기 -->
-    {% block contents %}
     <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{% url 'main' %}">MILLIWONKIM</a>
+
+            <div class="navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'main' %}">Main</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
+                  </li>
+                </ul>
+              </div>
+        </nav>
+        {% block contents %}
+        {% endblock %}
     </body>
     <footer>
     </footer>
-    {% endblock %}
 </html>
