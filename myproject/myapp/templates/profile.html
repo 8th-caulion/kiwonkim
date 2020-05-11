@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block contents %}
+{% block head %}
+{% endblock %}
+
+
 <body>
-    <div class="container">
-        <div class="container">
-            <h1>이름: 김기원</h1>
+    {% block contents %}
+    <div class="profile" style="text-align: center;">
+        <div class="content">
+            <h1>KIM KIWON</h1>
         </div>
         <br>
-        <div class="container">
-            <h2>나이: 26</h2>
-        </div>
-        <br>
-        <div class="container">
-            <h3>취미: 노래만들기, 넷플릭스보기, 프론트엔드 코딩하기, 한강에서 자전거타기, 술먹기</h3>
+        <div class="content">
+            <h1>26</h1>
         </div>
     </div>
+    {% endblock %}
 </body>
-{% endblock %}

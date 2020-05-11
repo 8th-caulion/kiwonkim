@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+{% endblock %}
+
+{% block contents %}
+
+    <div class="container">
+
+        <div class="row justify-content-md-center">
+            {% for req in reqs.all %}
+            <div class="col-sm-4" style="margin: 10px">
+                <div class="card" style="width: 18rem; text-align: center;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ req.title }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ req.pub_date }}</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ req.pub_date }}</h6>
+                        <p class="card-text">{{ req.body }}</p>
+                        <a class="btn btn-secondary" href="{% url 'detail' req.id %}">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <a
+        class="btn btn-primary"
+        href="{% url 'new' %}"
+        style="width: 50%; margin: 0 26%"
+    >
+        ADD
+    </a>
+
+{% endblock %}

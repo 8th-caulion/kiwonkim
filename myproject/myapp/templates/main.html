@@ -1,7 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
+{% endblock %}
 
 {% block contents %}
-<body>
-    <h1>HELLO WORLD</h1>
-</body>
+
+<div class="main">
+    <img src="https://source.unsplash.com/random" />
+</div>
+
 {% endblock %}

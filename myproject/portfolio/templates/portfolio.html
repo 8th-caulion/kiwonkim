@@ -1,26 +1,41 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'portfolio.css' %}" /> -->
+{% endblock %}
 
 {% block contents %}
-<body>
-    <div class="container">
+<div class="container">
+    <div class="title">
         <h1>Milliwonkim Workspace</h1>
-        <h2>As A Composer: <a href="https://www.youtube.com/channel/UCXpGYSja7qYXIpPXgWO64hQ">Milliwonkim</a></h2>
-
-        <h3>Top 1: <a href="https://www.youtube.com/watch?v=KQco5kHvZsA">보이콜드 담아 타입비트</a></h3>
-        <div class="video-container" style="text-align: center; margin-top: 25px;">
-            <object type="text/html" width="800" height="500" data="https://www.youtube.com/embed/KQco5kHvZsA"></object>
-        </div>
-
-        <h3>Top 2: <a href="https://www.youtube.com/watch?v=7RwY2J2Ldqc">엠비션뮤직 비워(Beer) 타입비트</a></h3>
-        <div class="video-container" style="text-align: center; margin-top: 25px;">
-            <object type="text/html" width="800" height="500" data="https://www.youtube.com/embed/7RwY2J2Ldqc"></object>
-        </div>
-
-        <h3>Top 3: <a href="https://www.youtube.com/watch?v=4-Xi6j1zja0">여자친구 에이프릴 매쉬업</a></h3>
-        <div class="video-container" style="text-align: center; margin-top: 25px;">
-            <object type="text/html" width="800" height="500" data="https://www.youtube.com/embed/4-Xi6j1zja0"></object>
-        </div>
-
+        <h2><a class="link" href="https://www.youtube.com/channel/UCXpGYSja7qYXIpPXgWO64hQ">Milliwonkim</a></h2>
     </div>
-</body>
+    <div class="row justify-content-md-center">
+        <div class="col-sm">
+            <div>
+                <h2><a class="link" href="https://www.youtube.com/watch?v=KQco5kHvZsA">BOYCOLD TYPE BEAT</a></h2>
+                <div class="video-container" style="text-align: center; margin-top: 25px;">
+                    <object type="text/html" width="550" height="400" data="https://www.youtube.com/embed/KQco5kHvZsA"></object>
+                </div>
+            </div>
+        </>
+        <div class="col-sm">
+            <div>
+                <h2><a class="link" href="https://www.youtube.com/watch?v=7RwY2J2Ldqc">AMBITION TYPE BEAT</a></h2>
+                <div class="video-container" style="text-align: center; margin-top: 25px;">
+                    <object type="text/html" width="550" height="400" data="https://www.youtube.com/embed/7RwY2J2Ldqc"></object>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div>
+                <h2><a class="link" href="https://www.youtube.com/watch?v=FJSHEo2zC70">BTS X ONF MASHUP</a></h2>
+                <div class="video-container" style="text-align: center; margin-top: 25px;">
+                    <object type="text/html" width="550" height="400" data="https://www.youtube.com/embed/FJSHEo2zC70"></object>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
